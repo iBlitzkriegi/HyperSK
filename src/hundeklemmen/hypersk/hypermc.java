@@ -1,4 +1,4 @@
-package hundeklemmen.SkriptAddon;
+package hundeklemmen.hypersk;
 
 import ch.njol.skript.Skript;
 
