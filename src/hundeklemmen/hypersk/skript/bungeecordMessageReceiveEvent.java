@@ -14,7 +14,7 @@ public class BungeecordMessageReceiveEvent extends Event implements Cancellable 
     private Integer amount;
     private Boolean cancelled = false;
 
-    public bungeecordMessageReceiveEvent(Player player, String key, Integer amount) {
+    public BungeecordMessageReceiveEvent(Player player, String key, Integer amount) {
         this.player = player;
         this.key = key;
         this.amount = amount;

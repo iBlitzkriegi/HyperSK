@@ -23,7 +23,7 @@ import ch.njol.skript.util.Getter;
 import static ch.njol.skript.registrations.EventValues.registerEventValue;
 
 
-public class hypermc extends JavaPlugin implements Listener {
+public class HyperMc extends JavaPlugin implements Listener {
 
 
     private static DecimalFormat format = new DecimalFormat("##.##");

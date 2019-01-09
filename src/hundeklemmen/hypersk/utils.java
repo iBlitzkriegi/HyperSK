@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.Arrays;
 
 
-public class utils {
+public class Utils {
 
     public static String fireGet(String urlParam) {
         try {
