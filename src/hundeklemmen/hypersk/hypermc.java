@@ -44,43 +44,43 @@ public class HyperMc extends JavaPlugin implements Listener {
 
         addon = Skript.registerAddon(this);
 
-        Skript.registerEffect(sendBungeecordMessageEffect.class, "hypermc request %number% credits from %player% with [key] %string%");
-        Skript.registerEffect(SendCreditsToUserEffect.class, "hypermc send %number% credits to %player%");
+        Skript.registerEffect(EffSendBungeecordMessage.class, "hypermc request %number% credits from %player% with [key] %string%");
+        Skript.registerEffect(EffSendCredits.class, "hypermc send %number% credits to %player%");
 
-        Skript.registerEffect(SendPlayerToServer.class, "hypermc send %player% to [server] %string%");
+        Skript.registerEffect(EffSendPlayerToServer.class, "hypermc send %player% to [server] %string%");
 
-        Skript.registerEvent("hypermc purchase", SimpleEvent.class, new Class[]{bungeecordMessageReceiveEvent.class}, "hypermc purchase");
+        Skript.registerEvent("hypermc purchase", SimpleEvent.class, new Class[]{BungeecordMessageReceiveEvent.class}, "hypermc purchase");
        //Skript.registerEvent("Leash Entity", SimpleEvent.class, PlayerLeashEntityEvent.class, new String[]{"[player ]leash"});
-        registerEventValue(bungeecordMessageReceiveEvent.class, Player.class, new Getter<Player, bungeecordMessageReceiveEvent>() {
+        registerEventValue(BungeecordMessageReceiveEvent.class, Player.class, new Getter<Player, BungeecordMessageReceiveEvent>() {
             @Override
-            public Player get(bungeecordMessageReceiveEvent event) {
+            public Player get(BungeecordMessageReceiveEvent event) {
                 return event.getPlayer();
             }
         }, 0);
-        registerEventValue(bungeecordMessageReceiveEvent.class, String.class, new Getter<String, bungeecordMessageReceiveEvent>() {
+        registerEventValue(BungeecordMessageReceiveEvent.class, String.class, new Getter<String, BungeecordMessageReceiveEvent>() {
             @Override
-            public String get(bungeecordMessageReceiveEvent event) {
+            public String get(BungeecordMessageReceiveEvent event) {
                 return event.getKey();
             }
         }, 0);
         registerEventValue(bungeecordMessageReceiveEvent.class, Integer.class, new Getter<Integer, bungeecordMessageReceiveEvent>() {
             @Override
-            public Integer get(bungeecordMessageReceiveEvent event) {
+            public Integer get(BungeecordMessageReceiveEvent event) {
                 return event.getAmount();
             }
         }, 0);
 
 
-        Skript.registerEvent("hypermc vote", SimpleEvent.class, new Class[]{voteEvent.class}, "hypermc vote");
-        registerEventValue(voteEvent.class, Player.class, new Getter<Player, voteEvent>() {
+        Skript.registerEvent("hypermc vote", SimpleEvent.class, new Class[]{EvtVote.class}, "hypermc vote");
+        registerEventValue(EvtVote.class, Player.class, new Getter<Player, EvtVote>() {
             @Override
-            public Player get(voteEvent event) {
+            public Player get(EvtVote event) {
                 return event.getPlayer();
             }
         }, 0);
-        Skript.registerExpression(getUserData.class, String.class, ExpressionType.COMBINED, "hypermc [the] %string%['s] data");
+        Skript.registerExpression(ExprUserData.class, String.class, ExpressionType.COMBINED, "hypermc [the] %string%['s] data");
 
-        Skript.registerExpression(ExprGetJSONString.class, String.class, ExpressionType.SIMPLE, "hypermc get %string% from %string%");
+        Skript.registerExpression(ExprJsonString.class, String.class, ExpressionType.SIMPLE, "hypermc get %string% from %string%");
         System.out.println("HyperSK enabled");
     }
 
