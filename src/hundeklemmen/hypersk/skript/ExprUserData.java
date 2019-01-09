@@ -3,13 +3,13 @@ package hundeklemmen.hypersk.skript;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.skript.lang.util.SimpleExpression;
-import hundeklemmen.SkriptAddon.utils;
+import hundeklemmen.hypersk.HyperMc;
 import org.bukkit.event.Event;
 import ch.njol.util.Kleenean;
 
 import javax.annotation.Nullable;
 
-public class getUserData extends SimpleExpression<String> {
+    public class ExprUserData extends SimpleExpression<String> {
 
     private Expression<String> player;
    // private Expression<String> dataType;

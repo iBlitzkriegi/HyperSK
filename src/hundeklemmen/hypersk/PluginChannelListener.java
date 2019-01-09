@@ -1,7 +1,7 @@
 package hundeklemmen.hypersk;
 
-import hundeklemmen.SkriptAddon.skript.bungeecordMessageReceiveEvent;
-import hundeklemmen.SkriptAddon.skript.voteEvent;
+import hundeklemmen.hypersk.skript.BungeecordMessageReceiveEvent;
+import hundeklemmen.hypersk.skript.EvtVote;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.messaging.PluginMessageListener;

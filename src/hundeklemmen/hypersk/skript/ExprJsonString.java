@@ -12,7 +12,7 @@ import ch.njol.util.Kleenean;
 import com.google.gson.*;
 import org.bukkit.event.Event;
 
-public class ExprGetJSONString extends SimpleExpression<String>{
+public class ExprJsonString extends SimpleExpression<String>{
 
     private Expression<String> input;
     private Expression<String> string;

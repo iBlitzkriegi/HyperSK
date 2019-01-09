@@ -4,7 +4,7 @@ import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser.ParseResult;
 import ch.njol.util.Kleenean;
-import hundeklemmen.SkriptAddon.hypermc;
+import hundeklemmen.hypersk.HyperMc;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 
@@ -13,7 +13,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
-public class SendCreditsToUserEffect extends Effect {
+public class EffSendCredits extends Effect {
 
     private Expression<Number> amount;
     private Expression<Player> player;
